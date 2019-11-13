@@ -1,0 +1,26 @@
+.form-inline > * {
+   margin-right:10px;
+}
+
+.form-inline > .form-group > label {
+   margin-right:10px;
+}
+
+.dz-message{
+    text-align: center;
+    font-size: 28px;
+}
+
+.table-detail-data {
+	border: none;
+	margin-bottom: 0;
+}
+
+.table-detail-data th {
+	text-align: right;
+}
+
+.table-detail-data th, .table-detail-data td {
+	padding: 0.4rem !important;
+	border-top: none;
+}
