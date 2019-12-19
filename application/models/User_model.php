@@ -55,7 +55,7 @@ class User_model extends CI_Model
         if (empty($user['wa'])) $user['wa'] = null;
         if (empty($user['email'])) $user['email'] = null;
         if (empty($user['kategori'])) $user['kategori'] = null;
-        if (empty($user['ceramah'])) $user['ceramah'] = null;
+        if (empty($user['check_all'])) $user['check_all'] = null;
         if (empty($user['pujabakti'])) $user['pujabakti'] = null;
         if (empty($user['meditasi'])) $user['meditasi'] = null;
         if (empty($user['dana_makan'])) $user['dana_makan'] = null;
@@ -63,9 +63,9 @@ class User_model extends CI_Model
         if (empty($user['fung_shen'])) $user['fung_shen'] = null;
         if (empty($user['sunskul'])) $user['sunskul'] = null;
         if (empty($user['bursa'])) $user['bursa'] = null;
-        if (empty($user['olahraga'])) $user['olahraga'] = null;
-        if (empty($user['baca_parita'])) $user['baca_parita'] = null;
-        if (empty($user['diskusi_dhamma'])) $user['diskusi_dhamma'] = null;
+        if (empty($user['keakraban'])) $user['keakraban'] = null;
+        if (empty($user['pelayanan_umat'])) $user['pelayanan_umat'] = null;
+        if (empty($user['donasi'])) $user['donasi'] = null;
         if (empty($user['seminar'])) $user['seminar'] = null;
         if (empty($user['kelas_dhamma'])) $user['kelas_dhamma'] = null;
         if (empty($user['jenis_kendaraan'])) $user['jenis_kendaraan'] = null;
@@ -89,7 +89,7 @@ class User_model extends CI_Model
             "wa" => $user['wa'],
             "email" => $user['email'],
             "kategori" => $user['kategori'],
-            "ceramah" => $user['ceramah'],
+            "check_all" => $user['check_all'],
             "pujabakti" => $user['pujabakti'],
             "meditasi" => $user['meditasi'],
             "dana_makan" => $user['dana_makan'],
@@ -97,9 +97,9 @@ class User_model extends CI_Model
             "fung_shen" => $user['fung_shen'],
             "sunskul" => $user['sunskul'],
             "bursa" => $user['bursa'],
-            "olahraga" => $user['olahraga'],
-            "baca_parita" => $user['baca_parita'],
-            "diskusi_dhamma" => $user['diskusi_dhamma'],
+            "keakraban" => $user['keakraban'],
+            "pelayanan_umat" => $user['pelayanan_umat'],
+            "donasi" => $user['donasi'],
             "seminar" => $user['seminar'],
             "kelas_dhamma" => $user['kelas_dhamma'],
             "jenis_kendaraan" => $user['jenis_kendaraan'],
@@ -123,7 +123,7 @@ class User_model extends CI_Model
         $sql = $sql . "wa='" . $user['wa'] . "',";
         $sql = $sql . "email='" . $user['email'] . "',";
         $sql = $sql . "kategori='" . $user['kategori'] . "',";
-        $sql = $sql . "ceramah='" . $user['ceramah'] . "',";
+        $sql = $sql . "check_all='" . $user['check_all'] . "',";
         $sql = $sql . "pujabakti='" . $user['pujabakti'] . "',";
         $sql = $sql . "meditasi='" . $user['meditasi'] . "',";
         $sql = $sql . "dana_makan='" . $user['dana_makan'] . "',";
@@ -131,9 +131,9 @@ class User_model extends CI_Model
         $sql = $sql . "fung_shen='" . $user['fung_shen'] . "',";
         $sql = $sql . "sunskul='" . $user['sunskul'] . "',";
         $sql = $sql . "bursa='" . $user['bursa'] . "',";
-        $sql = $sql . "olahraga='" . $user['olahraga'] . "',";
-        $sql = $sql . "baca_parita='" . $user['baca_parita'] . "',";
-        $sql = $sql . "diskusi_dhamma='" . $user['diskusi_dhamma'] . "',";
+        $sql = $sql . "keakraban='" . $user['keakraban'] . "',";
+        $sql = $sql . "pelayanan_umat='" . $user['pelayanan_umat'] . "',";
+        $sql = $sql . "donasi='" . $user['donasi'] . "',";
         $sql = $sql . "seminar='" . $user['seminar'] . "',";
         $sql = $sql . "kelas_dhamma='" . $user['kelas_dhamma'] . "',";
         $sql = $sql . "jenis_kendaraan='" . $user['jenis_kendaraan'] . "',";

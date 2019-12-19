@@ -76,7 +76,6 @@
                   <th>Minat</th>
                   <td><?php
                     $temp = '';
-                    if ($user->ceramah != NULL and $user->ceramah != '0') $temp .= 'Ceramah, ';
                     if ($user->pujabakti != NULL and $user->pujabakti != '0') $temp .= 'Pujabakti, ';
                     if ($user->meditasi != NULL and $user->meditasi != '0') $temp .= 'Meditasi, ';
                     if ($user->dana_makan != NULL and $user->dana_makan != '0') $temp .= 'Dana Makan, ';
@@ -84,9 +83,9 @@
                     if ($user->fung_shen != NULL and $user->fung_shen != '0') $temp .= 'Fung Shen, ';
                     if ($user->sunskul != NULL and $user->sunskul != '0') $temp .= 'Sunskul, ';
                     if ($user->bursa != NULL and $user->bursa != '0') $temp .= 'Bursa, ';
-                    if ($user->olahraga != NULL and $user->olahraga != '0') $temp .= 'Olahraga, ';
-                    if ($user->baca_parita != NULL and $user->baca_parita != '0') $temp .= 'Baca Parita, ';
-                    if ($user->diskusi_dhamma != NULL and $user->diskusi_dhamma != '0') $temp .= 'Diskusi Dhamma, ';
+                    if ($user->keakraban != NULL and $user->keakraban != '0') $temp .= 'Keakraban, ';
+                    if ($user->pelayanan_umat != NULL and $user->baca_parita != '0') $temp .= 'Pelayanan Umat, ';
+                    if ($user->donasi != NULL and $user->donasi != '0') $temp .= 'Donasi, ';
                     if ($user->seminar != NULL and $user->seminar != '0') $temp .= 'Seminar, ';
                     if ($user->kelas_dhamma != NULL and $user->kelas_dhamma != '0') $temp .= 'Kelas Dhamma, ';
                     echo substr($temp, 0, -2);

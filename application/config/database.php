@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'fighterlighter.com',
-	'username' => 'u6084323_absensi',
-	'password' => 'qwer@1234',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
 	'database' => 'u6084323_data',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

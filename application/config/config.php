@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://absensi.fighter.id/absensi-admin/';
+$config['base_url'] = 'http://localhost/absensi-admin';
 
 /*
 |--------------------------------------------------------------------------

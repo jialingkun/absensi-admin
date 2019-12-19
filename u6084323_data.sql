@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Nov 13, 2019 at 09:59 AM
--- Server version: 10.2.27-MariaDB
--- PHP Version: 7.2.7
+-- Host: 127.0.0.1
+-- Generation Time: Dec 19, 2019 at 09:25 AM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 5.6.38
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -52,14 +52,6 @@ CREATE TABLE `image` (
   `filename` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `image`
---
-
-INSERT INTO `image` (`id`, `pin`, `filename`) VALUES
-(2, 1, '1_1572840117.jpg'),
-(3, 1, '1_1572840125.jpg');
-
 -- --------------------------------------------------------
 
 --
@@ -68,21 +60,13 @@ INSERT INTO `image` (`id`, `pin`, `filename`) VALUES
 
 CREATE TABLE `scanlog` (
   `sn` int(11) DEFAULT NULL,
-  `scan_date` date NOT NULL,
+  `scan_date` datetime NOT NULL,
   `pin` int(11) NOT NULL,
   `verifymode` int(11) DEFAULT NULL,
   `iomode` int(11) DEFAULT NULL,
   `workcode` int(11) DEFAULT NULL,
   `status` varchar(1) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `scanlog`
---
-
-INSERT INTO `scanlog` (`sn`, `scan_date`, `pin`, `verifymode`, `iomode`, `workcode`, `status`) VALUES
-(2147483647, '2019-11-04', 1, 1, 1, 0, ''),
-(2147483647, '2019-11-04', 4, 1, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -104,7 +88,7 @@ CREATE TABLE `user` (
   `wa` varchar(15) DEFAULT '-',
   `email` varchar(255) DEFAULT '-',
   `kategori` varchar(25) DEFAULT '-',
-  `ceramah` varchar(1) DEFAULT '0',
+  `check_all` varchar(1) DEFAULT '0',
   `pujabakti` varchar(1) DEFAULT '0',
   `meditasi` varchar(1) DEFAULT '0',
   `dana_makan` varchar(1) DEFAULT '0',
@@ -112,9 +96,9 @@ CREATE TABLE `user` (
   `fung_shen` varchar(1) DEFAULT '0',
   `sunskul` varchar(1) DEFAULT '0',
   `bursa` varchar(1) DEFAULT '0',
-  `olahraga` varchar(1) DEFAULT '0',
-  `baca_parita` varchar(1) DEFAULT '0',
-  `diskusi_dhamma` varchar(1) DEFAULT '0',
+  `keakraban` varchar(1) DEFAULT '0',
+  `pelayanan_umat` varchar(1) DEFAULT '0',
+  `donasi` varchar(1) DEFAULT '0',
   `seminar` varchar(1) DEFAULT '0',
   `kelas_dhamma` varchar(1) DEFAULT '0',
   `jenis_kendaraan` varchar(50) DEFAULT '-',
@@ -124,16 +108,6 @@ CREATE TABLE `user` (
   `goldar` varchar(3) DEFAULT NULL,
   `nama_buddhist` varchar(99) DEFAULT '-'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`pin`, `nama`, `pwd`, `rfid`, `privilege`, `jenis_kelamin`, `tanggal_lahir`, `alamat`, `tlp1`, `tlp2`, `wa`, `email`, `kategori`, `ceramah`, `pujabakti`, `meditasi`, `dana_makan`, `baksos`, `fung_shen`, `sunskul`, `bursa`, `olahraga`, `baca_parita`, `diskusi_dhamma`, `seminar`, `kelas_dhamma`, `jenis_kendaraan`, `no_kendaraan`, `status`, `tempat_lahir`, `goldar`, `nama_buddhist`) VALUES
-(1, 'edvan', 0, '', 0, 'L', '2000-01-01', '-', '-', '-', '-', '-', '-', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Mobil', '-', '', '-', 'A', '-'),
-(2, 'linata', NULL, NULL, NULL, 'L', '2000-01-01', '-', '-', '-', '-', '-', '-', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Mobil', '-', NULL, '-', 'A', '-'),
-(3, 'b', NULL, NULL, NULL, 'L', '2000-01-01', '-', '-', '-', '-', '-', '-', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Mobil', '-', NULL, '-', 'A', '-'),
-(4, 'koind', NULL, NULL, NULL, 'L', '2000-01-01', '-', '-', '-', '-', '-', '-', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Mobil', '-', NULL, '-', 'A', '-');
 
 --
 -- Indexes for dumped tables
@@ -171,7 +145,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `image`
 --
 ALTER TABLE `image`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
