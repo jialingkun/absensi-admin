@@ -88,7 +88,7 @@
                     if ($user->donasi != NULL and $user->donasi != '0') $temp .= 'Donasi, ';
                     if ($user->seminar != NULL and $user->seminar != '0') $temp .= 'Seminar, ';
                     if ($user->kelas_dhamma != NULL and $user->kelas_dhamma != '0') $temp .= 'Kelas Dhamma, ';
-										if ($user->buku != NULL and $user->buku != '0') $temp .= 'Buku/e-book, ';
+		    if ($user->buku != NULL and $user->buku != '0') $temp .= 'Buku/e-book, ';
                     echo substr($temp, 0, -2);
                   ?></td>
                 </tr>
