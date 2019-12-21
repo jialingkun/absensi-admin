@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin` (
-  `email` varchar(20) NOT NULL,
+  `email` varchar(99) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -49,7 +49,7 @@ INSERT INTO `admin` (`email`, `password`) VALUES
 CREATE TABLE `image` (
   `id` int(11) NOT NULL,
   `pin` int(11) NOT NULL,
-  `filename` varchar(20) NOT NULL
+  `filename` varchar(99) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -76,16 +76,16 @@ CREATE TABLE `scanlog` (
 
 CREATE TABLE `user` (
   `pin` int(11) NOT NULL,
-  `nama` varchar(6) DEFAULT NULL,
+  `nama` varchar(99) DEFAULT NULL,
   `pwd` int(11) DEFAULT NULL,
   `rfid` varchar(0) DEFAULT NULL,
   `privilege` int(11) DEFAULT NULL,
   `jenis_kelamin` varchar(1) DEFAULT '-',
   `tanggal_lahir` date DEFAULT '2000-01-01',
   `alamat` varchar(255) DEFAULT '-',
-  `tlp1` varchar(15) DEFAULT '-',
-  `tlp2` varchar(15) DEFAULT '-',
-  `wa` varchar(15) DEFAULT '-',
+  `tlp1` varchar(99) DEFAULT '-',
+  `tlp2` varchar(99) DEFAULT '-',
+  `wa` varchar(99) DEFAULT '-',
   `email` varchar(255) DEFAULT '-',
   `kategori` varchar(25) DEFAULT '-',
   `check_all` varchar(1) DEFAULT '0',
