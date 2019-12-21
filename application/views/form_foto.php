@@ -84,10 +84,11 @@
                     if ($user->sunskul != NULL and $user->sunskul != '0') $temp .= 'Sunskul, ';
                     if ($user->bursa != NULL and $user->bursa != '0') $temp .= 'Bursa, ';
                     if ($user->keakraban != NULL and $user->keakraban != '0') $temp .= 'Keakraban, ';
-                    if ($user->pelayanan_umat != NULL and $user->baca_parita != '0') $temp .= 'Pelayanan Umat, ';
+                    if ($user->pelayanan_umat != NULL and $user->pelayanan_umat != '0') $temp .= 'Pelayanan Umat, ';
                     if ($user->donasi != NULL and $user->donasi != '0') $temp .= 'Donasi, ';
                     if ($user->seminar != NULL and $user->seminar != '0') $temp .= 'Seminar, ';
                     if ($user->kelas_dhamma != NULL and $user->kelas_dhamma != '0') $temp .= 'Kelas Dhamma, ';
+										if ($user->buku != NULL and $user->buku != '0') $temp .= 'Buku/e-book, ';
                     echo substr($temp, 0, -2);
                   ?></td>
                 </tr>
