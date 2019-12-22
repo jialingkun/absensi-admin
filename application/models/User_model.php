@@ -68,6 +68,7 @@ class User_model extends CI_Model
         if (empty($user['donasi'])) $user['donasi'] = null;
         if (empty($user['seminar'])) $user['seminar'] = null;
         if (empty($user['kelas_dhamma'])) $user['kelas_dhamma'] = null;
+        if (empty($user['buku'])) $user['buku'] = null;
         if (empty($user['jenis_kendaraan'])) $user['jenis_kendaraan'] = null;
         if (empty($user['no_kendaraan'])) $user['no_kendaraan'] = null;
         if (empty($user['status'])) $user['status'] = null;
@@ -102,6 +103,7 @@ class User_model extends CI_Model
             "donasi" => $user['donasi'],
             "seminar" => $user['seminar'],
             "kelas_dhamma" => $user['kelas_dhamma'],
+            "buku" => $user['buku'],
             "jenis_kendaraan" => $user['jenis_kendaraan'],
             "no_kendaraan" => $user['no_kendaraan'],
             "status" => $user['status'],
@@ -136,6 +138,7 @@ class User_model extends CI_Model
         $sql = $sql . "donasi='" . $user['donasi'] . "',";
         $sql = $sql . "seminar='" . $user['seminar'] . "',";
         $sql = $sql . "kelas_dhamma='" . $user['kelas_dhamma'] . "',";
+        $sql = $sql . "buku='" . $user['buku'] . "',";
         $sql = $sql . "jenis_kendaraan='" . $user['jenis_kendaraan'] . "',";
         $sql = $sql . "no_kendaraan='" . $user['no_kendaraan'] . "',";
         $sql = $sql . "status='" . $user['status'] . "',";

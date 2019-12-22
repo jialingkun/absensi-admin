@@ -101,11 +101,12 @@ CREATE TABLE `user` (
   `donasi` varchar(1) DEFAULT '0',
   `seminar` varchar(1) DEFAULT '0',
   `kelas_dhamma` varchar(1) DEFAULT '0',
+  `buku` varchar(1) DEFAULT '0',
   `jenis_kendaraan` varchar(50) DEFAULT '-',
   `no_kendaraan` varchar(50) DEFAULT '-',
   `status` varchar(1) DEFAULT '0',
   `tempat_lahir` varchar(99) DEFAULT '-',
-  `goldar` varchar(3) DEFAULT NULL,
+  `goldar` varchar(3) DEFAULT 'A',
   `nama_buddhist` varchar(99) DEFAULT '-'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
